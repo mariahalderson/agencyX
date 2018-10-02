@@ -1,19 +1,20 @@
-$header: #;
-$odd-bckgd: #;
-$header-bckgd: #;
-$section-header: #;
+//background colors
+$odd-bckgd: #EBEBEB;
+$section-header: #A0A0A0;
+$filter: rgba(255, 255, 255, 0.5);
 
 //font info
-$main-font: "whatever font", Arial, sans-serif;
+$main-font: "Oswald", Arial, sans-serif;
+$text-color: #555;
 
 //nav when it gets designed
-$nav-bckgd: #;
-$nav-items: #;
-$hamburger: #;
+$nav-bckgd: linear-gradient(rgba(160, 160, 160, 1), rgba(160,160,160,0));
 
-//font colour for letter overlay
-$about-tile: #; 
+//all borders
+$border-radius: 7px;
 
-//images for about us tiles
-$cait-img: images/....;
-$mar-img: images/....;
+//buttons
+$btn-color: #fff;
+$btn-border: 1px solid #555;
+$btn-fontsize: 15px;
+$btn-fontcolor: #A0A0A0;
