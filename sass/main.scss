@@ -10,6 +10,10 @@
      display: none;
  }
 
+ section{
+    padding-bottom: 20px;
+ }
+
 section:nth-child(odd){
     background-color: $odd-bckgd;
 }
@@ -25,6 +29,9 @@ section:nth-child(odd){
 }
 
 .button{
+    display: block;
+    max-width: 100px;
+    margin: auto;
     background-color: $btn-color;
     color: $btn-fontcolor;
     border: $btn-border;
@@ -38,6 +45,41 @@ section:nth-child(odd){
 
 
 
+
+//----------
+//NAVIGATION
+//----------
+
+nav{
+    max-width: 160px;
+    margin: auto;
+
+    ul{
+        list-style-type: none;
+
+        li{
+            padding: 5px 0;
+            border-bottom: 0.5px solid #555;
+            text-align: center;
+
+            a{
+                font-size: 20px;
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+
+.logo-placeholder{
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    line-height: 250px;
+}
+
  //----------
  //HEADER
  //----------
@@ -47,14 +89,25 @@ section:nth-child(odd){
      background: url("../images/header-bckgd-sm.png") no-repeat;
      
      //hamburger button
+    .open{
+        height: 100vh !important;
+    }
+
+    .change{
+        transform: rotate(90deg);
+    }
+
      #hamburger{
          height: 25px;
          display: flex;
          flex-direction: column;
          justify-content: space-between;
          position: fixed;
+         z-index: 6;
          right: 20px;
          top: 20px;
+         cursor: pointer;
+         transition: 0.3s ease-out;
 
          .burgerline{
             width: 35px;
@@ -67,7 +120,18 @@ section:nth-child(odd){
 
     //main nav
      #navigation{
-         display: none;
+         //display: none;
+         position: fixed;
+         z-index: 5;
+         background: linear-gradient(#A0A0A0 30%, transparent 70%);
+         width: 100%;
+         height: 0;
+         overflow: hidden;
+         transition: all 0.3s ease-out;
+
+         #mainNav{
+             padding-top: 30px;
+         }
      }
 
      //logo area
@@ -75,12 +139,6 @@ section:nth-child(odd){
          margin: auto;
          width: 75%;
 
-         .logo-placeholder{
-             text-align: center;
-             font-size: 40px;
-             color: #fff;
-             line-height: 250px;
-         }
      }
  }
 
@@ -140,6 +198,12 @@ section:nth-child(odd){
                 overflow: hidden;
                 transition: all 0.4s ease-out;
 
+                //hide on tablet
+                @media #{$tablet}{
+                    display: none;
+                }
+
+
                 .about-filter{
                     grid-column: 1 / -1;
                     grid-row-start: 1;
@@ -173,6 +237,7 @@ section:nth-child(odd){
                     z-index: 2;
                     z-index: 2;
                 }
+                
 
             }
 
@@ -180,9 +245,21 @@ section:nth-child(odd){
                 grid-column: 1 / -1;
                 grid-row-start: 1;
                 opacity: 0;
+
             }
+
         }
 
+
+         //tablet
+         #about-tablet{
+            display: none;
+
+            #tabletImg{
+                max-width: 438px;
+                overflow: hidden;
+            }
+        }
 
         #cait{
             grid-column: 1 / 2;
@@ -195,8 +272,22 @@ section:nth-child(odd){
             grid-row-start: 1;
             justify-items: end;
         }
+
+
+    //media queries
+    @media  #{$tablet} {
+
+            #about-tablet{
+                display: block;
+            }
+
+        }
+
     }
+
 }
+
+
 
 
 
@@ -209,29 +300,68 @@ section:nth-child(odd){
 
     .sectitle{
         color: $text-color;
-    }
-
-    .latestInfo{
-        margin: 20px auto;
-        max-width: 200px;
-        display: grid;
-
-        img{
-            grid-column: 1 / -1;
-            grid-row-start: 1;
-        }
-
-        .projInfo{
-            grid-column: 1 / -1;
-            grid-row-start: 1;
-            z-index: 2;
-            align-self: end;
-            text-align: center;
-            padding: 10px 0;
-            background: rgba(255, 255, 255, 0.5);
-            color: $text-color;
-           
-        }
-    }
+    }  
 
 }
+
+
+
+
+//----------
+//PAST PROEJCTS
+//----------
+
+#past{
+
+    .sectionhead{
+        background-color: $section-header;
+        color: #fff;
+    }
+}
+
+
+.pastproject{
+    margin: 20px auto;
+    max-width: 200px;
+    display: grid;
+
+    img{
+        grid-column: 1 / -1;
+        grid-row-start: 1;
+        max-width: 100%;
+    }
+
+    .projInfo{
+        grid-column: 1 / -1;
+        grid-row-start: 1;
+        z-index: 2;
+        align-self: end;
+        text-align: center;
+        padding: 10px 0;
+        background: rgba(255, 255, 255, 0.5);
+        color: $text-color;
+       
+    }
+}
+
+
+
+
+//----------
+//FOOTER
+//----------
+
+footer{
+    background-color: $section-header;
+
+    #copyright{
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+        padding: 40px 0;
+    }
+}
+
+
+
+
