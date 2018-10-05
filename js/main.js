@@ -8,6 +8,27 @@ var links = Array.from(document.querySelectorAll(".aboutNames")),
     tabletAbout = document.querySelector("#aboutText"),
     tabletimg = document.querySelector("#tabletImg");
 
+//lightbox vars
+var lightbox = document.querySelector("#lightbox"),
+    pictures = Array.from(document.querySelectorAll(".pastproject img")),
+    lbPicture = document.querySelector("#lbImg img"),
+    lbClose = document.querySelector("#lbClose");
+
+pictures.forEach(picture=>picture.addEventListener('click', function(e){
+    //get image name from thumbnail
+    var imgpath = e.target.src.split("/");
+    var imgname = imgpath[imgpath.length-1];
+    console.log(imgname);
+    console.log(lbPicture.src);
+    
+    lbPicture.src = "images/" + imgname;
+
+    if(lightbox.style.display = "none"){
+        lightbox.style.display = "block";
+    }
+}));
+
+
 
 
 //open hamburger menu
@@ -59,7 +80,14 @@ function aboutchange(e){
 
 
 hamburger.addEventListener('click', openmenu);
+
 links.forEach(link=>link.addEventListener('click', function(e){
     e.preventDefault();
      aboutchange(e);
 }));
+
+lbClose.addEventListener('click', function(){
+    if(lightbox.style.display = "block"){
+        lightbox.style.display = "none";
+    }
+});
