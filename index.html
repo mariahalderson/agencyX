@@ -20,8 +20,19 @@
                 <div class="burgerline line3"></div>
             </div>
 
-            <div id="logo">
-                <img src="#" alt="agency logo">
+            <div id="navigation">
+                <nav id="mainNav">
+                    <h2 class="hide">Main Navigation</h2>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Latest Work</a></li>
+                        <li><a href="#">Past Projects</a></li>
+                    </ul>
+                </nav> 
+            </div>
+
+            <div id="logoSpace">
+                <img src="images/logo.png" alt="logo">
             </div>
 
         </header>
@@ -31,7 +42,7 @@
         <section id="welcome">
             <h2 class="hide">Welcome</h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>MC Design Agency specializes in web design and development. See our work and contact us below.</p>
 
         </section>
 
@@ -46,13 +57,57 @@
 
             <div class="sectioncont">
 
-                <div id="cait" class="aboutTile">
-                    <p class= "aboutLetter">C</p>
+                <div id="about-tablet">
+
+                    <div id="imgContainer">
+                        <img id="tabletImg" src="images/about-med.png" alt="about photo">
+                    </div>
+
+                    <div id="aboutText">
+                        <p></p>
+                    </div>
+
+                    <div id="names">
+                        <ul>
+                            <li><a href="#" class="aboutNames" data-name="caitlin">CAITLIN</a></li>
+                            <li><a href="#" class="aboutNames" data-name="mariah">MARIAH</a></li>
+                        </ul>
+                    </div>
+
                 </div>
 
-                <div id="cait" class="aboutTile">
-                        <p class= "aboutLetter">C</p>
-                 </div>
+
+                <div id="cait" class="about">
+                    <div class="aboutTile">
+                        <img src="images/caitlin-sm.png" alt="Designer Caitlin">
+
+                        <div class="about-filter">
+                            <p class= "aboutLetter">C</p>
+                            <p>DESIGNER</p>
+                        </div>
+                    </div>
+
+                    <div id="caitCopy" class="aboutCopy">
+                        <p>My name is Caitlin MacKay and I am a designer.  My passion is videography and photoagraphy. I enjoy creating and editing in photoshop.  I hope to create a simple and creative user friendly wed experience.   I also Love to practice art using led, ink, or paints!</p>
+                    </div>
+                </div>
+
+
+                <div id="mariah" class="about">
+
+                    <div class="aboutTile">
+                        <img src="images/mariah-sm.png" alt="Developer Mariah">
+                        
+                        <div class="about-filter">
+                            <p class= "aboutLetter">M</p>
+                            <p>DEVELOPER</p>
+                        </div>
+                    </div>
+
+                    <div id="mariahCopy" class="aboutCopy">
+                        <p>Mariah is our Web Developer. She has experience in front and back end, and brings Caitlins designs to life with code.</p>
+                    </div>
+                </div>
 
             </div>
 
@@ -66,8 +121,13 @@
 
             <p class="sectitle">Latest Work</p>
 
-            <div class="latest">
-                <img src="#" alt="latest project">
+            <div id="latestInfo" class="pastproject">
+                <img srcset="images/latest-sm.png 200w, images/latest-med.png 412w" sizes="(min-width: 650px) 412w, 200w">
+
+                <div class="projInfo">
+                    <p class="infoTitle">PURE VOLUME</p>
+                    <p>September 2018</p>
+                </div>
             </div>
 
             <a href="#" class="button">Discover</a>
@@ -83,10 +143,96 @@
             <div class="sectionhead">
                 <p class="sectitle">Past Projects</p>
             </div>
+
+
+            <div class="pastproject">
+                <img src="images/proj1-sm.png" alt="Photogrgaphy project">
+
+                <div class="projInfo">
+                    <p class="infoTitle">PROJ TITLE</p>
+                    <p>date</p>
+                </div>
+            </div>
+
+            <div class="pastproject">
+                <img src="images/proj1-sm.png" alt="Photogrgaphy project">
+
+                <div class="projInfo">
+                    <p class="infoTitle">PROJ TITLE</p>
+                    <p>date</p>
+                </div>
+            </div>
+
+            <div class="pastproject">
+                <img src="images/proj1-sm.png" alt="Photogrgaphy project">
+
+                <div class="projInfo">
+                    <p class="infoTitle">PROJ TITLE</p>
+                    <p>date</p>
+                </div>
+            </div>
+
+            <div class="pastproject">
+                <img src="images/proj1-sm.png" alt="Photogrgaphy project">
+
+                <div class="projInfo">
+                    <p class="infoTitle">PROJ TITLE</p>
+                    <p>date</p>
+                </div>
+            </div>
+
+            <a href="#" class="button">VIEW MORE</a>
+
         </section>
+
+
+
+
+        <div id="lightbox">
+
+            <div id="lbClose">
+                <div class="x x1"></div>
+                <div class="x x2"></div>
+            </div>
+
+            <div id="lbImg">
+                <img src="#" alt="#">
+            </div>
+
+            <div id="lbLink">
+                <a href="#" class="button">VISIT PROJECT</a>
+            </div>
+
+        </div>
+
+
+
+
+
+        <footer>
+
+            <div id="logo">
+                <p class="logo-placeholder">AGENCY X</p>
+            </div>
+
+            <nav id="footerNav">
+                <h2 class="hide">Footer Navigation</h2>
+
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Lastest Work</a></li>
+                    <li><a href="#">Past Projects</a></li>
+                </ul>
+
+            </nav>
+
+            <p id="copyright">2018 Agency X</p>
+
+        </footer>
 
 
     </main>
     
+    <script src="js/main.js"></script>
 </body>
 </html>
